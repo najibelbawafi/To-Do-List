@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List Najieb</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <h2>📅 To Do List Najieb</h2>
+      <button id="toggleTheme">🌙</button>
+    </div>
+
+    <ul class="todo-list">
+      <li>
+        <input type="checkbox" id="task1">
+        <label for="task1">Sholat tepat waktu & ngaji Qur’an</label>
+      </li>
+      <li>
+        <input type="checkbox" id="task2">
+        <label for="task2">Belajar sekolah (materi utama)</label>
+      </li>
+      <li>
+        <input type="checkbox" id="task3">
+        <label for="task3">Ngoding / project robotik</label>
+      </li>
+      <li>
+        <input type="checkbox" id="task4">
+        <label for="task4">Olahraga (badminton atau workout ringan)</label>
+      </li>
+      <li>
+        <input type="checkbox" id="task5">
+        <label for="task5">Minum air putih cukup (min. 8 gelas)</label>
+      </li>
+      <li>
+        <input type="checkbox" id="task6">
+        <label for="task6">Baca buku / Novel</label>
+      </li>
+      <li>
+        <input type="checkbox" id="task7">
+        <label for="task7">Journaling & refleksi diri</label>
+      </li>
+      <li>
+        <input type="checkbox" id="task8">
+        <label for="task8">Istirahat cukup (tidur teratur)</label>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById("toggleTheme");
+    const body = document.body;
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        toggleBtn.textContent = "☀️";
+      } else {
+        toggleBtn.textContent = "🌙";
+      }
+    });
+  </script>
+</body>
+</html>
